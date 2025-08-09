@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /srv/react-node-mysql-app/backend
+    destination: /srv/aws-react-node-mysql-app/backend
     overwrite: yes
 hooks:
   ApplicationStop:

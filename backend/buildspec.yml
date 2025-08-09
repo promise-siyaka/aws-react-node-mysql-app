@@ -4,7 +4,7 @@ env:
   variables:
     NODE_ENV: "production"
     PORT: "3200"
-    LOG_DIR: "/var/log/react-node-mysql-app/backend"
+    LOG_DIR: "/var/log/aws-react-node-mysql-app/backend"
   parameter-store:
     DB_PASSWORD: "/nodeapp/db/password"
     DB_HOST: "/nodeapp/db/hostname"

@@ -196,7 +196,7 @@ sudo yum install -y nodejs
 sudo npm install -g pm2 
 
 # Define the log directory and ensure it exists 
-LOG_DIR="/var/log/react-node-mysql-app/backend" 
+LOG_DIR="/var/log/aws-react-node-mysql-app/backend" 
 mkdir -p $LOG_DIR 
 sudo chown -R root:root $LOG_DIR
 
@@ -223,13 +223,13 @@ sudo tee /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json > /de
       "files": {
         "collect_list": [
           {
-            "file_path": "/var/log/react-node-mysql-app/backend/combined.log",
+            "file_path": "/var/log/aws-react-node-mysql-app/backend/combined.log",
             "log_group_name": "node-app-logs-backend",
             "log_stream_name": "{instance_id}-combined-log",
             "timestamp_format": "%Y-%m-%d %H:%M:%S"
           },
           {
-            "file_path": "/var/log/react-node-mysql-app/backend/error.log",
+            "file_path": "/var/log/aws-react-node-mysql-app/backend/error.log",
             "log_group_name": "node-app-logs-backend",
             "log_stream_name": "{instance_id}-error-log",
             "timestamp_format": "%Y-%m-%d %H:%M:%S"
